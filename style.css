@@ -22,22 +22,57 @@ body
 {
 	background-color: white;
 	color: #092834;
-	padding: 10px 10px 0 10px;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-	border-top: 1px solid black;
+	padding: 0;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #092834;
+    background-color: #F0F7D4;
+	border-left: 1px solid #092834;
+	border-right: 1px solid #092834;
+	border-top: 1px solid #092834;
+	cursor: default;	
+}
+
+h3
+{
+	font-weight: 700;
 	
 }
+
+.nav-pills>li+li  { 
+
+	color: #092834;
+	background-color: white;
+	border-top:1px solid #092834;
+	border-right:1px solid #092834;
+}
+
+.nav>li>a:focus, .nav>li>a:hover
+{
+	color: #092834;
+	background-color: #B2D732;
+	
+}
+a
+{
+	color: #092834;
+}
+
+.nav-pills>li>a {
+    border-radius: 0px;
+}	
 
 .bg2
 {
 	background-color: white;
 	color: #092834;
 	padding:  10px 10px 10px 10px;
-	border-bottom: 1px solid black;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-	
+	border: 1px solid #092834;
+	-webkit-box-shadow: 10px 10px 26px -5px rgba(9,40,52,0.23);
+	-moz-box-shadow: 10px 10px 26px -5px rgba(9,40,52,0.23);
+	box-shadow: 10px 10px 26px -5px rgba(9,40,52,0.23);
+		
 }
 
 input[type=name],
@@ -45,7 +80,7 @@ input[type=email],
 input[type=password]
 {
 	width: 100%;
-	background-color: #efefef;
+	background-color: #f2f2f2;
 	color: #666;
 	border: 2px solid #ddd;
 	border-radius: 5px;
@@ -69,9 +104,9 @@ input[type=password]:focus
 input[type=submit]
 {
 	background-color: #092834;
-	font-size: 16px;
+	font-size: 18px;
 	color: #F0F7D4;
-	padding: 8px 8px;
+	padding: 8px 30px 8px 30px;
 	margin-top: 15px;
 	border: none;
 	border-radius: 5px;
