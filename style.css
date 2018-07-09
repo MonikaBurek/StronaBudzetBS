@@ -5,6 +5,7 @@ body
 	font-size: 16px;
 	margin: 0 !important;
 	font-family: 'Lato', sans-serif;
+	
 }
 
 .jumbotron
@@ -17,6 +18,7 @@ body
 	font-weight: 700;
 	margin-bottom: 0px;
 }
+
 .space
 {
 	margin-top:150px;
@@ -77,29 +79,32 @@ a
 	border-bottom: 1px solid #092834;
 	-webkit-box-shadow: 10px 10px 26px -5px rgba(9,40,52,0.23);
 	-moz-box-shadow: 10px 10px 26px -5px rgba(9,40,52,0.23);
-	box-shadow: 10px 10px 26px -5px rgba(9,40,52,0.23);
-	
-		
+	box-shadow: 10px 10px 26px -5px rgba(9,40,52,0.23);		
 }
 
 input[type=name],
 input[type=email],
-input[type=password]
+input[type=password],
+input[type=amount],
+input[type=date],
+textarea
 {
-	width: 100%;
+	
 	background-color: #f2f2f2;
 	color: #666;
-	border: 2px solid #ddd;
-	border-radius: 5px;
 	padding:15px;
 	box-sizing: border-box;
 	resize: vertical;
+	margin-bottom:15px;
 	
 }
 
 input[type=name]:focus,
 input[type=email]:focus,
-input[type=password]:focus
+input[type=password]:focus,
+input[type=amount]:focus,
+input[type=date]:focus,
+textarea:focus
 
 {
 	box-shadow: 0px 0px 10px 2px rgba(9,26,45,0.4);
@@ -123,10 +128,11 @@ input[type=submit]
 	outline: none;	
 }
 
-input[type=submit]:focus
+input[type=submit]:focus, input[type=submit]:hover
 {
 	box-shadow: 0px 0px 10px 2px rgba(9,26,45,0.4);
 	background-color: #070612;
+	color: #F0F7D4;
 }
 
 /* Strona główna*/
@@ -178,6 +184,29 @@ input[type=submit]:focus
     text-decoration: none;
     color: #092834;
     background-color: #F0F7D4;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #B2D732;
+}
+.navbar-default .navbar-toggle {
+    border-color: #B2D732;
+}
+
+#myNavbar > ul:nth-child(1) > li.dropdown.open > ul > li > a
+
+{
+	color: #B2D732;
+	background-color: #092834;
+}
+
+#myNavbar > ul:nth-child(1) > li.dropdown.open > ul > li > a:focus,
+#myNavbar > ul:nth-child(1) > li.dropdown.open > ul > li > a:hover
+
+{
+	ext-decoration: none;
+    color: #092834;
+    background-color: #F0F7D4;
 }	
 	
 h3.articleHeader
@@ -195,7 +224,8 @@ p
 .bg3
 {
 	background-color:white;
-	padding:10px;
+	padding: 25px;
+	
 }	
 
  img
@@ -219,4 +249,77 @@ p
 	font-size: 18px;
 	color: #F0F7D4;
 	
+}
+
+.titleForm
+{
+	font-size:16px;
+	font-weight:700;
+	margin-left: 15px;	
+	
+}
+
+.rowExpense
+{
+	padding-top: 15px;
+}
+
+.btn-dropMenu
+{
+	color: #092834;
+    background-color: #66B032;
+    border-color: #347B98;
+	font-size: 17px;
+	font-weight:700;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover
+ {
+    text-decoration: none;
+    color: #092834;
+    background-color: #F0F7D4;
+    outline: 0;
+}
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th 
+{
+    border: 1px solid #092834;
+}
+
+.table>thead>tr>th
+ { 
+	background-color: #092834;
+	color: #66B032;
+}
+
+.table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th 
+{
+    border: 1px solid #092834;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)
+ {
+    background-color: #B2D732;
+}
+
+.emptyRow
+{
+	margin:15px;
+}
+
+
+.wellResult
+{
+	border: 4px double #092834;
+	background-color: #F0F7D4;
+	color: #092834;
+	padding: 5px;
+	width: 100px;
+}
+
+.bg5
+{
+	background-color: #347B98;
+	color: #092834;
+	font-weight: 700;
 }
