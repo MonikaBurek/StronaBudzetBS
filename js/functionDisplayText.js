@@ -1,19 +1,19 @@
 // Przeglądaj bilans: napis
 
-function displayText
+function displayText()
 {
 	var differenceInBalance;
 	var text;
 	
-	differenceInBalance = document.getElementById("differenceNumber");
+	differenceInBalance = document.getElementById("differenceNumber").innerHTML;
 	
 	if (differenceInBalance > 0)
 	{
-		text = Gratulacje.Świetnie zarządzasz finasami!;
+		text = "Gratulacje.Świetnie zarządzasz finasami!";
 	}
 	else if (differenceInBalance < 0)
 	{
-		text = Uważaj, wpadasz w długi!;
+		text = "Uważaj, wpadasz w długi!";
 	}
 	
 	document.getElementById("differenceText").innerHTML = text;
