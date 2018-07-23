@@ -2,18 +2,22 @@
 
 function displayText()
 {
+	
+	var differenceInBalanceString;
 	var differenceInBalance;
 	var text;
 	
-	differenceInBalance = document.getElementById("differenceNumber").innerHTML;
+	differenceInBalanceString = document.getElementById("differenceNumber").innerHTML;
+	differenceInBalance = Number(differenceInBalanceString);
 	
-	if (differenceInBalance > 0)
+	
+	if (differenceInBalance >= 0)
 	{
-		text = "Gratulacje.Świetnie zarządzasz finasami!";
+		text = differenceInBalance + 'Gratulacje.Świetnie zarządzasz finasami!';
 	}
-	else if (differenceInBalance < 0)
+	else (differenceInBalance < 0)
 	{
-		text = "Uważaj, wpadasz w długi!";
+		text = differenceInBalance + 'Uważaj, wpadasz w długi!';
 	}
 	
 	document.getElementById("differenceText").innerHTML = text;

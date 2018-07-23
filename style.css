@@ -6,6 +6,8 @@ body
 	margin: 0 !important;
 	font-family: 'Lato', sans-serif;
 	padding-bottom: 100px;
+	
+	
 }
 
 .jumbotron
@@ -54,7 +56,8 @@ body
 	cursor: default;	
 }
 
-body > main > div > div:nth-child(2) > div.col-md-4.col-md-offset-4.bg1 > ul
+
+body > main >div > div:nth-child(2) > div.col-md-4.col-md-offset-4.bg1 > ul
 {
 	
 	border:  1px solid #092834;
@@ -123,6 +126,7 @@ input[type=password]:focus,
 input[type=amount]:focus,
 input[type=date]:focus,
 textarea:focus
+
 {
 	box-shadow: 0px 0px 10px 2px rgba(9,26,45,0.4);
 	border-radius: 5px;
@@ -256,7 +260,10 @@ p
 	position: fixed;
 	height: 60;
 	bottom: 0;
-	padding: 20px 0px 20px  0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 0px;
+    padding-left: 0px;
 	width: 100%
 }
 
@@ -272,18 +279,22 @@ p
 {
     .footerDown
 	{
-		padding: 10px 0px 10px  0px;
+		padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 0px;
+    padding-left: 0px;
 		font-size: 15px;
-		height: 40;
+		height:40;
     }
 }
 
 
 .titleForm
 {
-	font-size: 16px;
-	font-weight: 700;
+	font-size:16px;
+	font-weight:700;
 	margin-left: 15px;	
+	
 }
 
 .rowExpense
@@ -349,4 +360,10 @@ p
 	background-color: #347B98;
 	color: #092834;
 	font-weight: 700;
+}
+
+.rowWithoutMargin
+{
+	margin-left: 0px;
+	margin-right: 0px;
 }

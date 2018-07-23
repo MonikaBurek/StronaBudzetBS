@@ -15,11 +15,11 @@
 	
 	<script src="https://www.gstatic.com/charts/loader.js"></script>
 	<script src="js/pieChart.js"></script>
-	
+	<script src="js/Chart.js"></script>
 	
 </head>
 
-<body>
+<body onload="createPieChart()">
 	<header>
 		<div class="jumbotron">
 			<div class="container text-center">
@@ -61,7 +61,7 @@
 		</div>
 	</nav>
 	
-	<div class="row text-justify" style="margin-bottom:30px;">
+	<div class="row rowWithoutMargin" style="margin-bottom:30px;">
 		<div class="col-md-3 col-md-offset-7">
 			<div class="dropdown">
 				<button class="btn btn-dropMenu dropdown-toggle" type="button" data-toggle="dropdown">Wybierz okres czasu
@@ -76,8 +76,7 @@
 		</div>
 	</div>	
 	
-	
-	<main>
+		<main>
 		<div class="container"> 
 				<div class="row text-center">
 					<div class="col-md-4 col-md-offset-2 bg3">
@@ -161,10 +160,12 @@
 				<div class="row emptyRow"></div>
 				
 				<div class="row ">
-					<div class="col-md-6 col-md-offset-3 ">
+					<div class="col-md-6  col-sm-12 col-md-offset-3 ">
 						
-						<div id="piechart">Lala
+						<div class="chart-container bg3">
+							<canvas id="chart"></canvas>
 						</div>
+						
 					</div>
 					<div class="col-md-3"></div>
 				</div>
@@ -216,7 +217,11 @@
 				</div>
 				<div class="row emptyRow"></div>
 		</div>
+
+
+
 	</main>
+	
 	
 	<footer class="container-fluid text-center bg4 footerDown">
 		
