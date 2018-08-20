@@ -38,15 +38,10 @@ var chart = new Chart(ctx, {
 		responsive: true,
 		legend: {
 			position:'right',
-			labels:{
-				fontColor:'#092834'
-			}
 		},
 		title: {
 			display: true,
-			text: 'Zestawienie wydatków wg kategorii',
-			fontSize: 16,
-			fontColor: '#092834'
+			text: 'Zestawienie wydatków wg kategorii'
 		}
 	}
         
