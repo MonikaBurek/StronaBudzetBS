@@ -47,6 +47,11 @@ article
 	margin-bottom: 0px;
 }
 
+.colorIcon
+{
+	color: #091A2D
+}
+
 .space
 {
 	margin-top: 100px;
@@ -375,15 +380,38 @@ footer
 	width: 100px;
 }
 
+.wellFinalResult
+{
+	border: 4px double #092834;
+	background-color:#66B032;
+	color: #092834;
+	padding: 5px;
+	width: 100px;
+}
+
+#differenceText
+{
+	padding: 5px;
+	background-color:#66B032;
+	text-align:center;
+}
+
 .bg5
 {
-	background-color: #347B98;
+	background-color: #E3f4D7;
 	color: #092834;
 	font-weight: 700;
 }
 
 .rowWithoutMargin
 {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.rowWithMarginBottom
+{
+	margin-bottom: 30px;
 	margin-left: 0px;
 	margin-right: 0px;
 }

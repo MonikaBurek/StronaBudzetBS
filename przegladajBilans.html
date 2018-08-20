@@ -24,7 +24,7 @@
 		<header>
 			<div class="jumbotron">
 				<div class="container text-center">
-					<h2><span style="color: #091A2D"><i class="icon-money"></i></span>
+					<h2><span class="colorIcon"><i class="icon-money"></i></span>
 					Aplikacja do prowadzenia budżetu domowego!</h2>   				
 				</div>
 			</div>
@@ -63,7 +63,7 @@
 
 		</nav>
 		
-		<div class="row rowWithoutMargin" style="margin-bottom:30px;">
+		<div class="row rowWithMarginBottom">
 			<div class="col-md-3 col-md-offset-7">
 				<div class="dropdown">
 					<button class="btn btn-dropMenu dropdown-toggle" type="button" data-toggle="dropdown">Wybierz okres czasu
@@ -203,20 +203,19 @@
 							<div class="col-md-3 col-md-offset-1">Różnica:</div>
 							<div class="col-md-3">
 							
-								<div class="well well-sm wellResult " style="background-color:#66B032">
+								<div class="well well-sm wellFinalResult">
 									<div id="differenceNumber">500</div>
 								</div>
+							</div>
+							
+							<div class="col-md-5 ">
+								<div id="differenceText"> Wyświetla tekst Ok lub nie OK</div>
+								<script src="js/functionDisplayText.js"></script>
 							</div>	
-							<div class="col-md-5"></div>	
 						</div>
 						<div class="col-md-3"></div>
 					</div>
 					
-					<div class="row" style="margin-bottom:50px;">
-					
-						<div id="differenceText"> lall</div>
-						<script src="js/functionDisplayText.js"></script>
-					</div>
 					<div class="row emptyRow"></div>
 			</div>
 		</main>
