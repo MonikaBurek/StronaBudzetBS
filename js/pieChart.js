@@ -1,50 +1,45 @@
 
-function createPieChart()
+function createPieChart () 
 {
-var ctx = document.getElementById("chart");
-var chart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ['Mieszkanie', 'Transport', 'Telekomunikacja', 'Opieka zdrowotna', 'Oszczednosci'],
-        datasets: [{
-			label: "zestawnie",
-            data: [658, 10, 50, 56, 70 ],
-
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-                'rgba(255, 206, 86, 0.5)',
-                'rgba(75, 192, 192, 0.5)',
-                'rgba(255, 159, 64, 0.5)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)',
-                'rgba(75, 192, 192, 0.8)',
-                'rgba(255, 159, 64, 0.8)'
-            ],
-            borderWidth: 1,
-			hoverBackgroundColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-        }]
-    },
-    options: {
-		responsive: true,
-		legend: {
-			position:'right',
-		},
-		title: {
-			display: true,
-			text: 'Zestawienie wydatków wg kategorii'
-		}
-	}
-        
-});
+	var chart = new CanvasJS.Chart("chartContainer", {
+				exportEnabled: true,
+				animationEnabled: true,
+				title:{
+					text: "Zestawienie wydatków w okresie ..."
+				},
+				legend:{
+					cursor: "pointer",
+					itemclick: explodePie
+				},
+				data: [{
+					type: "pie",
+					showInLegend: true,
+					toolTipContent: "{name}: <strong>{y}%</strong>",
+					//indexLabel: "{name} - {y}%",
+					dataPoints: [
+						{ y: 65, name: "Mieszkanie", exploded: true },
+						{ y: 15, name: "Transport" },
+						{ y: 10, name: "Telekomunikacja" },
+						{ y: 7, name: "Opieka zdrowotna" },
+						{ y: 3, name: "Oszczędności" },
+					]
+				}]
+			});
+			
+	chart.render();
+	chart.title.set("fontSize", 24);
+	chart.title.set("fontColor", "#092834", false);
+	chart.legend.set("fontSize", 16);
 }
 
+function explodePie (e) 
+{
+			if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+				e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+			} else {
+				e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+			}
+			e.chart.render();
+
+}
+	
